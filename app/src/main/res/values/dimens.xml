@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="main_screen_margin">10dp</dimen>
+    <dimen name="main_text_padding">10dp</dimen>
+    <dimen name="menu_title_size">25sp</dimen>
+    <dimen name="detail_backdrop_height">250sp</dimen>
+    <dimen name="backdrop_title">30dp</dimen>
+    <dimen name="backdrop_subtitle">18dp</dimen>
+</resources>
