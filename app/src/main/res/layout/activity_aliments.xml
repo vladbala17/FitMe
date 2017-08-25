@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.fitme.AlimentsActivity">
+
+    <TextView
+        android:id="@+id/lbl_aliment_fats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/aliments_label_margin"
+        android:text="@string/aliment_fats_label"
+        android:textSize="@dimen/standard_aliments_label"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/lbl_aliment_carbs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_toStartOf="@id/lbl_aliment_fats"
+        android:text="@string/aliment_carbs_label"
+        android:textSize="@dimen/standard_aliments_label"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/lbl_aliment_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/aliment_name_label"
+        android:textSize="@dimen/standard_aliments_label"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/lbl_aliment_protein"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_toStartOf="@id/lbl_aliment_carbs"
+        android:text="@string/aliment_protein_label"
+        android:textSize="@dimen/standard_aliments_label"
+        android:textStyle="bold" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_aliments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lbl_aliment_name">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_add_aliments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="24dp"
+        android:src="@drawable/ic_add_black_24dp"
+        app:fabSize="normal" />
+
+</RelativeLayout>

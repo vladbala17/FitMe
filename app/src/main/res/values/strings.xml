@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">FitMe</string>
+    <string name="aliment_name_label">Name</string>
+    <string name="aliment_protein_label">Protein</string>
+    <string name="aliment_carbs_label">Carbs</string>
+    <string name="aliment_fats_label">Fats</string>
+    <string name="et_name_hint">Name</string>
+    <string name="et_protein_hint">Protein</string>
+    <string name="et_carbs_hint">Carbs</string>
+    <string name="et_fats_hint">Fats</string>
+    <string name="enter_aliment_label">Enter a new aliment</string>
+    <string name="add_aliment_ok_btn">Add</string>
+    <string name="add_aliment_cancel_btn">Cancel</string>
+    <string name="no_data_available">No aliments in database</string>
 </resources>

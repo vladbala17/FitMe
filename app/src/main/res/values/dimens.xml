@@ -6,4 +6,7 @@
     <dimen name="detail_backdrop_height">250sp</dimen>
     <dimen name="backdrop_title">30dp</dimen>
     <dimen name="backdrop_subtitle">18dp</dimen>
+    <dimen name="aliments_label_margin">10dp</dimen>
+    <dimen name="standard_aliment_text_size">15sp</dimen>
+    <dimen name="standard_aliments_label">20sp</dimen>
 </resources>

@@ -1,8 +1,14 @@
 package com.example.android.fitme;
 
+import android.content.ContentValues;
+import android.database.Cursor;
+import android.net.Uri;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.LoaderManager;
+import android.support.v4.content.AsyncTaskLoader;
+import android.support.v4.content.Loader;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -14,6 +20,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.android.fitme.adapters.MenuAdapter;
+import com.example.android.fitme.data.AlimentContract;
 import com.example.android.fitme.domain.MainItem;
 
 import java.util.ArrayList;
@@ -36,13 +43,6 @@ public class MainActivity extends AppCompatActivity {
         initCollapsingToolbar();
 
         mCardViewRecyclerView = (RecyclerView) findViewById(R.id.rv_card_view);
-        FloatingActionButton fabAddFood = (FloatingActionButton) findViewById(R.id.fab_add_food);
-        fabAddFood.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Click", Toast.LENGTH_SHORT).show();
-            }
-        });
         mMenuList = new ArrayList<>();
         mMenuAdapter = new MenuAdapter(this, mMenuList);
 
@@ -106,4 +106,5 @@ public class MainActivity extends AppCompatActivity {
         mMenuAdapter.notifyDataSetChanged();
 
     }
+
 }

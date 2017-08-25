@@ -55,16 +55,4 @@
         android:id="@+id/include"
         layout="@layout/content_main" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab_add_food"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top|left"
-        android:layout_margin="40dp"
-        android:src="@drawable/ic_add_black_24dp"
-        app:fabSize="normal"
-        app:layout_anchor="@+id/include"
-        app:layout_anchorGravity="bottom|right" />
-
-
 </android.support.design.widget.CoordinatorLayout>
