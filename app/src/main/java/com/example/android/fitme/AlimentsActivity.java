@@ -60,25 +60,16 @@ public class AlimentsActivity extends AppCompatActivity implements LoaderManager
                 return false;
             }
 
-            // Called when a user swipes left or right on a ViewHolder
             @Override
             public void onSwiped(RecyclerView.ViewHolder viewHolder, int swipeDir) {
-                // Here is where you'll implement swipe to delete
-
-                // COMPLETED (1) Construct the URI for the item to delete
-                //[Hint] Use getTag (from the adapter code) to get the id of the swiped item
-                // Retrieve the id of the task to delete
                 int id = (int) viewHolder.itemView.getTag();
 
-                // Build appropriate uri with String row id appended
                 String stringId = Integer.toString(id);
                 Uri uri = AlimentContract.AlimentEntry.CONTENT_URI;
                 uri = uri.buildUpon().appendPath(stringId).build();
 
-                // COMPLETED (2) Delete a single row of data using a ContentResolver
                 getContentResolver().delete(uri, null, null);
 
-                // COMPLETED (3) Restart the loader to re-query for all tasks after a deletion
                 getSupportLoaderManager().restartLoader(TASK_LOADER_ID, null, AlimentsActivity.this);
 
             }
@@ -108,10 +99,8 @@ public class AlimentsActivity extends AppCompatActivity implements LoaderManager
             @Override
             protected void onStartLoading() {
                 if (mTaskData != null) {
-                    // Delivers any previously loaded data immediately
                     deliverResult(mTaskData);
                 } else {
-                    // Force a new load
                     forceLoad();
                 }
             }
@@ -132,7 +121,6 @@ public class AlimentsActivity extends AppCompatActivity implements LoaderManager
                 }
             }
 
-            // deliverResult sends the result of the load, a Cursor, to the registered listener
             public void deliverResult(Cursor data) {
                 mTaskData = data;
                 super.deliverResult(data);
@@ -142,7 +130,6 @@ public class AlimentsActivity extends AppCompatActivity implements LoaderManager
 
     @Override
     public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
-        // Update the data that the adapter uses to create ViewHolders
         mAlimentsAdapter.swapCursor(data);
     }
 

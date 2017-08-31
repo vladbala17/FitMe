@@ -63,7 +63,6 @@ public class MainActivity extends AppCompatActivity {
         AppBarLayout appBarLayout = (AppBarLayout) findViewById(R.id.appbar);
         appBarLayout.setExpanded(true);
 
-        // hiding & showing the title when toolbar expanded & collapsed
         appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
             boolean isShow = false;
             int scrollRange = -1;
@@ -90,17 +89,20 @@ public class MainActivity extends AppCompatActivity {
                 R.drawable.food,
                 R.drawable.meal,
                 R.drawable.progress,
-                R.drawable.setting
+                R.drawable.setting,
+                R.drawable.drink_water
         };
 
         MainItem mainItemFood = new MainItem("Aliments", thumbnails[0]);
         MainItem mainItemMeals = new MainItem("Meals", thumbnails[1]);
         MainItem mainItemRaports = new MainItem("Progress", thumbnails[2]);
         MainItem mainItemSettings = new MainItem("Settings", thumbnails[3]);
+        MainItem mainItemDrinkWater = new MainItem("Drink water", thumbnails[4]);
 
         mMenuList.add(mainItemFood);
         mMenuList.add(mainItemMeals);
         mMenuList.add(mainItemRaports);
+        mMenuList.add(mainItemDrinkWater);
         mMenuList.add(mainItemSettings);
 
         mMenuAdapter.notifyDataSetChanged();

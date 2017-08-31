@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.android.fitme.AlimentsActivity;
+import com.example.android.fitme.DrinkWaterActivity;
 import com.example.android.fitme.MainActivity;
 import com.example.android.fitme.R;
 import com.example.android.fitme.domain.MainItem;
@@ -49,6 +50,9 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuViewHolder
                     case 1:
                         Toast.makeText(mContext, "Meal was pressed", Toast.LENGTH_SHORT).show();
                         break;
+                    case 3:
+                        Intent drinkWaterIntent = new Intent(mContext, DrinkWaterActivity.class);
+                        mContext.startActivity(drinkWaterIntent);
 
                 }
             }

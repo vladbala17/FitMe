@@ -82,26 +82,19 @@ public class AddAlimentDialog extends DialogFragment {
     }
 
     public void addAliment(Aliment aliment) {
-        // Insert new task data via a ContentResolver
-        // Create new empty ContentValues object
         ContentValues contentValues = new ContentValues();
-        // Put the task description and selected mPriority into the ContentValues
 
         contentValues.put(AlimentContract.AlimentEntry.COLUMN_NAME, aliment.getName());
         contentValues.put(AlimentContract.AlimentEntry.COLUMN_PROTEINS, aliment.getProtein());
         contentValues.put(AlimentContract.AlimentEntry.COLUMN_CARBS, aliment.getCarbs());
         contentValues.put(AlimentContract.AlimentEntry.COLUMN_FATS, aliment.getFats());
 
-        // Insert the content values via a ContentResolver
         Uri uri = getActivity().getContentResolver().insert(AlimentContract.AlimentEntry.CONTENT_URI, contentValues);
 
-        // Display the URI that's returned with a Toast
-        // [Hint] Don't forget to call finish() to return to MainActivity after this insert is complete
         if (uri != null) {
             Toast.makeText(getDialog().getContext(), uri.toString(), Toast.LENGTH_LONG).show();
         }
 
-        // Finish activity (this returns back to MainActivity)
         getDialog().dismiss();
         getActivity().recreate();
 

@@ -24,7 +24,18 @@
             android:authorities="com.example.android.fitme"
             android:exported="false" />
 
-        <activity android:name=".AlimentsActivity"></activity>
+        <activity android:name=".AlimentsActivity" />
+        <activity android:name=".DrinkWaterActivity"></activity>
+        <service
+            android:name=".sync.WaterReminderIntentService"
+            android:exported="false"/>
+        <service
+            android:name=".sync.WaterReminderFirebaseService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE"/>
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
