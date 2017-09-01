@@ -11,7 +11,7 @@ import android.graphics.BitmapFactory;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.ContextCompat;
 
-import com.example.android.fitme.DrinkWaterActivity;
+import com.example.android.fitme.activities.DrinkWaterActivity;
 import com.example.android.fitme.R;
 import com.example.android.fitme.sync.ReminderTask;
 import com.example.android.fitme.sync.WaterReminderIntentService;

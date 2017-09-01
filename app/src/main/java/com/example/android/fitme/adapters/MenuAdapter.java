@@ -11,10 +11,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.example.android.fitme.AlimentsActivity;
-import com.example.android.fitme.DrinkWaterActivity;
-import com.example.android.fitme.MainActivity;
+import com.example.android.fitme.activities.AlimentsActivity;
+import com.example.android.fitme.activities.DrinkWaterActivity;
 import com.example.android.fitme.R;
+import com.example.android.fitme.activities.SettingsActivity;
 import com.example.android.fitme.domain.MainItem;
 
 import java.util.List;
@@ -53,7 +53,11 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuViewHolder
                     case 3:
                         Intent drinkWaterIntent = new Intent(mContext, DrinkWaterActivity.class);
                         mContext.startActivity(drinkWaterIntent);
-
+                        break;
+                    case 4:
+                        Intent settingsIntent = new Intent(mContext, SettingsActivity.class);
+                        mContext.startActivity(settingsIntent);
+                        break;
                 }
             }
         });

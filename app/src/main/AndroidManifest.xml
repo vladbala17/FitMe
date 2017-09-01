@@ -10,7 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
+            android:launchMode="singleTop"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,18 +25,27 @@
             android:authorities="com.example.android.fitme"
             android:exported="false" />
 
-        <activity android:name=".AlimentsActivity" />
-        <activity android:name=".DrinkWaterActivity"></activity>
+        <activity
+            android:name=".activities.AlimentsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.DrinkWaterActivity"
+            android:screenOrientation="portrait" />
+
         <service
             android:name=".sync.WaterReminderIntentService"
-            android:exported="false"/>
+            android:exported="false" />
         <service
             android:name=".sync.WaterReminderFirebaseService"
             android:exported="false">
             <intent-filter>
-                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE"/>
+                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
             </intent-filter>
         </service>
+
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:parentActivityName=".activities.MainActivity"></activity>
     </application>
 
 </manifest>

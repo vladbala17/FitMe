@@ -25,4 +25,15 @@
     <string name="water_chug_toast">GLUG GLUG GLUG</string>
     <string name="charging_reminder_notification_title">Device Charging - Where\'s that water?</string>
     <string name="charging_reminder_notification_body">There\'s never a better time to drink water than when you know your phone is charging. Drink up!</string>
+    <string name="pref_show_protein_key" translatable="false">show_protein</string>
+    <string name="pref_show_protein_label" translatable="false">Show protein</string>
+    <string name="pref_show_true" translatable="false">Shown</string>
+    <string name="pref_show_false" translatable="false">Hidden</string>
+    <string name="pref_show_measure_unit_label" translatable="false">Measure unit</string>
+    <string name="pref_show_measure_unit_key" translatable="false">measure_unit</string>
+    <string name="pref_kilo_label" translatable="false">Kilograms</string>
+    <string name="pref_kilo_value" translatable="false">kilograms</string>
+    <string name="pref_pounds_label" translatable="false">Pounds</string>
+    <string name="pref_pounds_value" translatable="false">pounds</string>
+
 </resources>

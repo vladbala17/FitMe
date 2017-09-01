@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="pref_measure_unit_label">
+        <item>@string/pref_kilo_label</item>
+        <item>@string/pref_pounds_label</item>
+    </array>
+
+    <array name="pref_measure_unit_values">
+        <item>@string/pref_kilo_value</item>
+        <item>@string/pref_pounds_value</item>
+    </array>
+
+</resources>

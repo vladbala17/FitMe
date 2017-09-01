@@ -1,4 +1,4 @@
-package com.example.android.fitme;
+package com.example.android.fitme.activities;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.android.fitme.R;
 import com.example.android.fitme.sync.ReminderTask;
 import com.example.android.fitme.sync.ReminderUtilities;
 import com.example.android.fitme.sync.WaterReminderIntentService;
